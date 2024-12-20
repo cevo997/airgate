@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: 430px;
+    overflow: hidden;
+}
+
+.image {
+    background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/za_sajt_samo_parcela_3440x1445.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-image 0.5s ease-in-out; 
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.container:hover .image {
+    background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/render_za_sajt_05a.jpg'); 
+}
+
+
+.image.animate {
+    animation: changeImage 0.5s ease-in-out;
+}
+
+
+@keyframes changeImage {
+    0% {
+        background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/za_sajt_samo_parcela_3440x1445.jpg');
+    }
+    100% {
+        background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/render_za_sajt_05a.jpg');
+    }
+}
+
+/* Tekstualni deo */
+.text-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: 0px 0px 15px #000000;
+    color: white;
+}
+
+h1 {
+    font-family: 'Rajdhani';
+    text-shadow: 0px 0px 15px #000000;
+    color: white;
+    font-size: 35px;
+    margin: 15px 0; 
+}
+
+h2 {
+    font-family: 'Rajdhani', cursive;
+    text-shadow: 0px 0px 15px #000000;
+    font-size: 35px;
+    margin: 5px 0; 
+}
+
+h3 {
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 0px 0px 15px #000000;
+    font-size: 28px;
+    margin: 0; 
+}
+
+.button-container {
+    margin-top: 50px;
+}
+
+.location-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-family: 'Rajdhani', bold;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff; 
+    text-decoration: none;
+    background-color: transparent; 
+    border: 2px solid #ffffff; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.location-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #CA9B31; 
+    transform: scale(1.05);
+}
+
+.iframe-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Dugme za nazad */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #CA9B31;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 4;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    
+    h1 {
+        font-size: 20px; 
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    h3 {
+        font-size: 20px; 
+    }
+
+    .location-button {
+        font-size: 16px; 
+        padding: 8px 12px; 
+    }
+
+    .back-button {
+        font-size: 16px; 
+        padding: 8px 12px; 
+    }
+
+    .text-container {
+        top: 10px; 
+    }
+    
+    .text-container h1, .text-container h2, .text-container h3 {
+        margin: 5px 0; 
+    }
+
+    .button-container {
+        margin-top: 50px; 
+    }
+}
+
