@@ -13,6 +13,7 @@ body {
 
 .container {
     position: fixed;
+    top: 0;
     width: 100%;
     max-width: 1024px;
     height: 430px;
