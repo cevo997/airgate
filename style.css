@@ -14,7 +14,7 @@ body {
 .container {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vh;
     max-width: 100vh;
     height: 100vh;
     overflow: hidden;
@@ -24,7 +24,7 @@ body {
     background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/za_sajt_samo_parcela_3440x1445.jpg'); 
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: 100vh;
     height: 100vh;
     position: absolute;
     transition: background-image 0.5s ease-in-out; 
