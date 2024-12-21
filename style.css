@@ -24,8 +24,8 @@ body {
     background-image: url('https://res.volvox.rs/uploaded/agency/xpert-nekretnine/za_sajt_samo_parcela_3440x1445.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%; /* Širina slike se prilagođava */
-    height: 100vh; /* Visina slike je isto kao visina ekrana */
+    width: 3440px; /* Širina slike se prilagođava */
+    height: 1445px; /* Visina slike je isto kao visina ekrana */
     position: absolute;
     transition: background-image 0.5s ease-in-out;
 }
